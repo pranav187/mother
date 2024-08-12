@@ -1,0 +1,374 @@
+ /* body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: #fae1dd;
+
+    margin: 0;
+} 
+
+.container {
+
+    position: relative;
+    
+}
+
+.valentine{
+    position: relative;
+    top: 50px;
+    cursor: pointer;
+    animation: up 3s linear infinite;
+
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.envelope {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: #f08080;
+    display: grid;
+    place-items: center;
+
+    border-radius: 15px;
+       
+}
+
+.envelope::before {
+    content: '';
+    position: absolute;
+    width: 212px;
+    height: 212px;
+    background: #f08080;
+    transform: rotate(45deg);
+    top: -105px;
+    left: 44px;
+    border-radius: 30px 0 0 0;
+
+}
+
+.front {
+    position: absolute;
+    border-right: 180px solid #f4978e;
+    border-top: 95px solid transparent;
+    border-bottom: 100px solid transparent;
+    left: 120px;
+    top: 5px;
+    width: 0;
+    height: 0;
+    z-index: 10;
+
+
+}
+
+.front::before {
+    position: absolute;
+    content: '';
+    border-left: 300px solid #fda996;
+    border-top: 195px solid transparent;
+    left: -120px;
+    top: -95px;
+
+
+}
+
+.card{
+    position: relative;
+    /* width: 250px;
+    height: 180px; */
+/* 
+    width: 300px;
+    height: 351px;
+    background: #fff;
+    border-radius: 2px;
+    display: grid;
+    place-items: center;
+    transition: 1s;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 2px solid #003049;
+    border-style: dashed;
+}
+
+.valentine:hover .card{
+    transform: translateY(-300px);
+
+}
+
+.card .text{
+    font-family: 'Brush Script MT', cursive;
+    font-size: 28px;
+    text-align: center;
+    line-height: 25px;
+    color: #003049;
+}
+
+.card .heart{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background: red;
+    bottom: 20px;
+    transform: rotate(45deg);
+    border-radius: 50% 0 0 50%;
+}
+
+.card .heart::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: red;
+    border-radius: 0 50% 50% 0;
+    right: 0;
+    transform: rotate(-90deg);
+    transform-origin: top;
+}
+
+.card .heart::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: red;
+    right: -18px;
+
+    
+}
+
+@keyframes up {
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+}
+
+.valentine::before{
+    content: '';
+    position: absolute;
+    width: 330px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .3);
+    top: 265px;
+    left: -15px;
+    animation: scale 3s linear infinite;
+}
+
+@keyframes scale {
+    0%, 100%{
+        transform: scaleX(1);
+    }
+    50%{
+        transform: scaleX(.85);
+    }
+    
+}  */
+
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: #fae1dd;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+}
+
+.valentine {
+    position: relative;
+    top: 50px;
+    cursor: pointer;
+    animation: up 3s linear infinite;
+    transition: transform 0.5s ease-in-out;
+}
+
+.envelope {
+    position: relative;
+    width: 300px;
+    /* height: 200px; */
+    height: 288px;
+    background: #f08080;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+
+}
+
+
+
+.envelope::before {
+    content: '';
+    position: absolute;
+    width: 212px;
+    height: 212px;
+    background: #f08080;
+    transform: rotate(45deg);
+    top: -105px;
+    left: 44px;
+    
+    border-radius: 30px 0 0 0;
+}
+
+
+
+.front {
+    position: absolute;
+    border-right: 180px solid #f4978e;
+    border-top: 95px solid transparent;
+    border-bottom: 100px solid transparent;
+    left: 120px;
+    /* top: 5px; */
+    top: 89px;
+    width: 0;
+    height: 0;
+    z-index: 10;
+}
+
+.front::before {
+    position: absolute;
+    content: '';
+   
+    border-left: 300px solid #fda996;
+    border-top: 195px solid transparent;
+    /* left: -120px;
+    top: -95px; */
+    left: -119px;
+    top: -95px;
+   
+}
+
+.card {
+    position: relative;
+    width: 270px;
+    /* Slightly reduced width to ensure better fit */
+    height: 260px;
+    /* Reduced height to prevent overflow */
+    background: #fff;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    transition: 1s;
+    padding: 15px;
+    /* Added padding for better text alignment */
+    box-sizing: border-box;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 2px dashed #003049;
+    border-radius: 8px;
+}
+
+.valentine:hover .card {
+    transform: translateY(-300px);
+   
+}
+
+.card .text {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 13px;
+    /* Reduced font size for better fit */
+    text-align: center;
+    line-height: 1.5;
+    color: #003049;
+    margin: 0;
+    /* Removed default margin for better control */
+}
+
+.card .heart {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background: red;
+    margin-top: 10px;
+    transform: rotate(45deg);
+    border-radius: 50% 0 0 50%;
+}
+
+.card .heart::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: red;
+    border-radius: 0 50% 50% 0;
+    right: 0;
+    transform: rotate(-90deg);
+    transform-origin: top;
+}
+
+.card .heart::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: red;
+    right: -18px;
+}
+
+@keyframes up {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+.valentine::before {
+    content: '';
+    position: absolute;
+    width: 330px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.3);
+    /* top: 265px; */
+    top: 300px;
+    left: -15px;
+    animation: scale 3s linear infinite;
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(0.85);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
